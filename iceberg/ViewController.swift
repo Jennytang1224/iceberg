@@ -14,12 +14,10 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var tipLabel: UILabel!
     
-
     @IBOutlet weak var totalLabel: UILabel!
     
     @IBOutlet weak var tipControl: UISegmentedControl!
     
-
     @IBOutlet weak var amountPerPersonLabel: UILabel!
 
     @IBOutlet weak var sliderValueLabel: UILabel!
@@ -48,23 +46,21 @@ class ViewController: UIViewController {
         total = bill + tip
         
         // update the tip and total label
-        tipLabel.text = String(format: "$%.2f", tip)
+        tipLabel.text = String(format: "%.2f", tip)
         totalLabel.text = String(format: "%.2f", total)
     }
 
     @IBAction func slideNumOfPeople(_ sender: Any) {
         let numberOfPeople = Double(round(numberOfSplitsSlider.value))
-        sliderValueLabel.text = String(numberOfPeople)
+        sliderValueLabel.text = String(Int(numberOfPeople))
 
         total = Double(totalLabel.text!) ?? 0
-        //print(total1)
         
         // calculate amount per person
         let amountPerPerson = (total/numberOfPeople)
         // update amount per person
         amountPerPersonLabel.text = String(format: "%.2f", amountPerPerson)
     }
-    
     
 }
 
