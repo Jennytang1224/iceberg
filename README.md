@@ -1,12 +1,11 @@
-# iceberg
-tip calculator
+
 # Pre-work - *Iceberg*
 
 **Iceberg** is a tip calculator application for iOS.
 
 Submitted by: **Jenny Tang**
 
-Time spent: **5** hours spent in total
+Time spent: **3** hours spent in total
 
 ## User Stories
 
